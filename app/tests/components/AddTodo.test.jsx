@@ -23,7 +23,7 @@ describe('AddTodo', () => {
     expect(spy).toHaveBeenCalledWith(todoText);
   });
 
-  it('should not call onAddTodo prop with invalid data', () => {
+  it('should not call onAddTodo prop when invalid input', () => {
     var todoText = '';
     var spy = expect.createSpy();
     var addTodo = TestUtils.renderIntoDocument(<AddTodo onAddTodo={spy}/>);
